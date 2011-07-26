@@ -1,2 +1,4 @@
 adminer-*.php*
 index.php
+adminer.sql
+adminer.sql.*
