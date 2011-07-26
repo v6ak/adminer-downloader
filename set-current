@@ -1,0 +1,4 @@
+#!/bin/bash
+
+[ -f "index.php" ] && rm index.php
+ln "$1" index.php

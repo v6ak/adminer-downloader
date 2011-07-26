@@ -1,0 +1,15 @@
+#!/bin/bash
+source adminer.conf
+
+FLAGS_STR=""
+if [ "$MYSQL_ONLY" == 1 ]; then
+	FLAGS_STR="$FLAGS_STR-mysql"
+fi
+
+if [ "$EN_ONLY" == 1 ]; then
+	FLAGS_STR="$FLAGS_STR-en"
+fi
+
+FILENAME="adminer-$1$FLAGS_STR.php"
+
+wget "http://downloads.sourceforge.net/adminer/$FILENAME"
